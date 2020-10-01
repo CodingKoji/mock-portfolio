@@ -1,0 +1,49 @@
+// --------------- SIDENAV ---------------
+.sidenav {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  // position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  button &:active,
+  button &:focus {
+    border: none;
+    background-color: none;
+  }
+  svg {
+    height: 20px;
+  }
+}
+
+.menuLinks {
+  margin-left: 60px;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  @media (min-width: 960px) {
+    margin-left: 100px;
+  }
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: -50px;
+  height: 100vh;
+  width: 180vw;
+  z-index: -15;
+}

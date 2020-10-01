@@ -1,0 +1,16 @@
+.header {
+  width: 40vw;
+  position: absolute;
+  z-index: 10;
+}
+
+.navigation {
+  padding: 0rem 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+}

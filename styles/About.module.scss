@@ -1,0 +1,29 @@
+.aboutContent {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  position: relative;
+  z-index: 0;
+}
+
+.aboutContent::-webkit-scrollbar {
+  display: none;
+}
+
+.aboutText {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutDetails {
+  height: 100vh;
+  width: 100vw;
+  background-color: #3282b8;
+
+  h1 {
+    margin: 0;
+  }
+}
