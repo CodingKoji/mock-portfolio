@@ -1,10 +1,9 @@
 import Head from "next/head";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import PageRight from "../components/PageRight";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/Contact.module.scss";
 
-const homeTextVariants = {
+const contactTextVariants = {
   hidden: { opacity: 1 },
   show: {
     opacity: 1,
@@ -25,27 +24,27 @@ const textVariants = {
   },
 };
 
-export default function Home() {
+export default function Contact() {
   return (
     <PageRight>
       <Head>
-        <title>Home</title>
+        <title>Contact</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.homeContent} style={{}}>
+      <div className={styles.contactContent} style={{}}>
         <motion.div
-          variants={homeTextVariants}
+          variants={contactTextVariants}
           initial="hidden"
           animate="show"
-          className={styles.homeText}
+          className={styles.contactText}
         >
           <motion.h1 variants={textVariants} className="title">
-            Hi I'm Brenden
+            Let's Connect
           </motion.h1>
 
           <motion.p variants={textVariants} className="description">
-            Frontend web developer based out of southern California.
+            coding.koji@gmail.com
           </motion.p>
         </motion.div>
       </div>

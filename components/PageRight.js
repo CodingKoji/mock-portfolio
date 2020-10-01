@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const pageVariants = {
   pageInitial: {
     opacity: 0,
-    x: "-100vw",
+    x: 0,
   },
   pageAnimate: {
     opacity: 1,

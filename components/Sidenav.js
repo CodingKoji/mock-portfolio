@@ -10,6 +10,14 @@ const menuVariants = {
     width: "8vw",
   },
 };
+const menuLinksVariants = {
+  open: {
+    opacity: 1,
+  },
+  closed: {
+    opacity: 0,
+  },
+};
 
 const imgVariants = {
   open: {
@@ -23,6 +31,7 @@ const imgVariants = {
 export default function Sidenav({ menuOpen, handleMenu }) {
   return (
     <motion.div
+      initial={{ width: "8vw" }}
       animate={menuOpen ? "open" : "closed"}
       variants={menuVariants}
       className={styles.sidenav}
@@ -34,7 +43,12 @@ export default function Sidenav({ menuOpen, handleMenu }) {
           <rect y="60" width="100" height="20"></rect>
         </svg>
       </button>
-      <div className={styles.menuLinks}>
+
+      <motion.div
+        animate={menuOpen ? "open" : "closed"}
+        variants={menuLinksVariants}
+        className={styles.menuLinks}
+      >
         <nav>
           <Link href="/">
             <a onClick={handleMenu}>Home</a>
@@ -49,7 +63,7 @@ export default function Sidenav({ menuOpen, handleMenu }) {
             <a onClick={handleMenu}>Contact</a>
           </Link>
         </nav>
-      </div>
+      </motion.div>
       <motion.img
         animate={menuOpen ? "open" : "closed"}
         variants={imgVariants}
